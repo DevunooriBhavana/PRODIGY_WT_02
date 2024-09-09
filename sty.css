@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./bacG.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .stopwatch {
+    text-align: center;
+    background-color: #eaebe900;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  /* Apply calculator font to the time display */
+  .time {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  .controls {
+    margin-top: 20px;
+  }
+/* Styling for buttons */
+button {
+  background-color: #4d5256;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+  background-color: #2980b9;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Add subtle pulse animation */
+button:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Add cool gradient background on hover */
+button:hover {
+  background: linear-gradient(135deg, #6b6e72, #b9292e);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+  #lapList {
+    text-align: left;
+    margin-top: 20px;
+  }
+  .lap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+  .lap span {
+    width: 80px;
+    text-align: right;
+  }
+  .logoname{
+    font-size: 180%;
+  }
